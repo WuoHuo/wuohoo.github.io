@@ -1,0 +1,30 @@
+export const data = {
+  "key": "v-5d059c92",
+  "path": "/theme-reco/api.html",
+  "title": "api",
+  "lang": "en-US",
+  "frontmatter": {
+    "title": "api",
+    "date": "2020/05/29"
+  },
+  "excerpt": "",
+  "headers": [],
+  "git": {
+    "updatedTime": null,
+    "contributors": []
+  },
+  "filePathRelative": "theme-reco/api.md"
+}
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}
