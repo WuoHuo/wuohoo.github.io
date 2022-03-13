@@ -23,7 +23,7 @@ jobs:
           key: dependencies_wuohoo.github.io
       - run:
           name: Build
-          command: yarn build
+          command: yarn docs:build
       - run:
           name: Prepare shell commands
           command: chmod +x scripts/deploy.sh
