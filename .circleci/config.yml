@@ -1,41 +1,32 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
 version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
-<<<<<<< HEAD
-      - image: circleci/node:latest
-=======
       - image: circleci/node:16.14.0
->>>>>>> cbb43a5bca2fef4a20df98bbc052f28a21001d31
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-    # working_directory: ~/repo
-    # only master branch will be deployed
-    filters:
-      branches:
-        only: master
+    branches:
+      only:
+        - master
     steps:
-      # connect to github by ssh
       - add_ssh_keys:
           fingerprints:
-          - "a6:06:de:4b:fa:03:63:92:b8:68:c5:90:58:50:b5:ff"
+            - "a6:06:de:4b:fa:03:63:92:b8:68:c5:90:58:50:b5:ff"
       - checkout
-      # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-      - run: yarn install
+            - dependencies_circle_demo
+      - run:
+          name: Install
+          command: yarn install
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-      - run: sh deploy-circleci.sh
+          key: dependencies_circle_demo
+      - run:
+          name: Build
+          command: yarn build
+      - run:
+          name: Prepare shell commands
+          command: chmod +x scripts/deploy.sh
+      - run:
+          name: Run Deploy to Github pages
+          command: ./scripts/deploy.sh
