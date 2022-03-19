@@ -1,1 +1,0 @@
-import{o as e,c as r}from"./app.98faf442.js";import{_ as c}from"./plugin-vue_export-helper.21dcd24c.js";const a={};function o(p,t){return e(),r("p",null,"This is api.")}var _=c(a,[["render",o]]);export{_ as default};

@@ -1,1 +1,0 @@
-import{o as e,c as r}from"./app.98faf442.js";import{_ as t}from"./plugin-vue_export-helper.21dcd24c.js";const c={};function o(s,a){return e(),r("p",null,"This is theme.")}var _=t(c,[["render",o]]);export{_ as default};
