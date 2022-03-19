@@ -13,4 +13,8 @@ export const pagesComponents = {
   "v-0d897d83": defineAsyncComponent(() => import(/* webpackChunkName: "v-0d897d83" */"D:/myPrograms/wohuo.github.io/docs/.vuepress/.temp/pages/theme-reco/theme.html.vue")),
   // path: /404.html
   "v-3706649a": defineAsyncComponent(() => import(/* webpackChunkName: "v-3706649a" */"D:/myPrograms/wohuo.github.io/docs/.vuepress/.temp/pages/404.html.vue")),
+  // path: /timeline/
+  "v-01560935": defineAsyncComponent(() => import(/* webpackChunkName: "v-01560935" */"D:/myPrograms/wohuo.github.io/docs/.vuepress/.temp/pages/timeline/index.html.vue")),
+  // path: /posts/1/
+  "v-03d52fd3": defineAsyncComponent(() => import(/* webpackChunkName: "v-03d52fd3" */"D:/myPrograms/wohuo.github.io/docs/.vuepress/.temp/pages/posts/1/index.html.vue")),
 }

@@ -103,5 +103,13 @@ export default defineUserConfig<DefaultThemeOptions>({
     //   // hideComments: true // 隐藏评论
     // },
   },
+  plugins: [
+    ['@/vuepress/medium-zoom', {
+      serviceWorker: true
+    }],
+    ['flowchart', {
+      serviceWorker: true
+    }]
+  ]
   // debug: true,
 })
